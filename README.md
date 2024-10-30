@@ -1,0 +1,1 @@
+# dynamic-node-template-az-update
