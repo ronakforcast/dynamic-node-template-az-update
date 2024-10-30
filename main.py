@@ -130,11 +130,7 @@ def process_clusters(api_key: str, cluster_id: str, node_template_names: List[st
                 logging.error("Failed to update node template '%s' in cluster '%s'.", node_template_name, cluster_id)
 
 def main():
-    # Load required environment variables
-    # os.environ["API_KEY"] = "5f86b6e142b87f59f8239f0036f76418f1af5c8a5e6166c4127b38b72da942cc"
-    # os.environ["CLUSTER_ID"] = "49bc272f-cee1-467d-a2d2-93843acafedf"
-    # os.environ["NODE_TEMPLATE_NAMES"] = "testNT1,RandomNT,testNT2,test2"
-    # os.environ["AZ_LIST"] = "us-east-2b,us-east-2b,us-east-2c"
+
     try:
         api_key = os.getenv("API_KEY")
         cluster_id = os.getenv("CLUSTER_ID")
