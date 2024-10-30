@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynamicazsync-deployment
+  labels:
+    app: dynamicazsync
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynamicazsync
+  template:
+    metadata:
+      labels:
+        app: dynamicazsync
+    spec:
+      containers:
+      - name: dynamicazsync
+        image: ronakpatildocker/dynamicazsync:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: API_KEY
+            value: ""  # Replace with An Api Key
+          - name: CLUSTER_ID
+            value: "" #  Replace with your cluster id
+          - name: NODE_TEMPLATE_NAMES
+            value: "testNT1,testNT2"  # Comma-separated
+          - name: AZ_LIST
+            value: "us-east-2a,us-east-2b,us-east-2c"  # Comma-separated by priority order  "first,second,"third,etc" 
+            
