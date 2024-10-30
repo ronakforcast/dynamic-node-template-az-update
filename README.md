@@ -4,6 +4,7 @@ Dynamic AZ Sync is a Python application that automates the process of checking t
 
 ## Table of Contents
 
+- [Architecture](#Architecture)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Deployment](#deployment)
@@ -11,6 +12,13 @@ Dynamic AZ Sync is a Python application that automates the process of checking t
 - [Environment Variables](#environment-variables)
 - [Logging](#logging)
 
+
+
+## Architecture
+
+Architecture of the Dynamic AZ Sync application:
+
+![Architecture Diagram](arch.png)
 
 ## Features
 
